@@ -1,0 +1,42 @@
+{
+  "name": "trumeid-idv-starter",
+  "private": true,
+  "workspaces": [
+    "infra",
+    "services/*",
+    "packages/*",
+    "services/engines/iddoc",
+    "services/engines/liveness",
+    "services/engines/facecompare",
+    "services/policy",
+    "services/workflow",
+    "services/webhooks",
+    "packages/cli"
+  ],
+  "scripts": {
+    "build": "yarn workspaces run build",
+    "bootstrap": "chmod +x setup-cdk.sh && ./setup-cdk.sh",
+    "deploy:all": "yarn workspace @trumeid/infra deploy",
+    "synth": "yarn workspace @trumeid/infra synth",
+    "lint": "eslint ."
+  },
+  "devDependencies": {
+    "eslint": "^9.0.0",
+    "@types/node": "^20.11.0",
+    "typescript": "^5.5.0",
+    "@types/yargs": "^17.0.32",
+    "@types/aws-lambda": "^8.10.134"
+  },
+  "dependencies": {
+    "aws-lambda": "^1.0.7",
+    "@aws-sdk/client-eventbridge": "^3.535.0",
+    "@aws-sdk/client-s3": "^3.535.0",
+    "@aws-sdk/credential-providers": "^3.535.0",
+    "yargs": "^17.7.2",
+    "@aws-sdk/client-dynamodb": "^3.613.0",
+    "@aws-sdk/lib-dynamodb": "^3.613.0",
+    "@aws-sdk/client-secrets-manager": "^3.613.0",
+    "crypto-js": "^4.2.0",
+    "uuid": "^9.0.1"
+  }
+}
