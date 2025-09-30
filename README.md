@@ -1,6 +1,6 @@
 # TruMeID IDV — Starter Repo (MVP)
 
-Enterprise-grade, AWS-native microservice for ID Document Validation + Liveness + Face Match.
+Enterprise-grade, Identity microservice for ID Document Validation + Liveness + Face Match.
 - AWS CDK (TypeScript), API Gateway, Lambda (Node 20), Step Functions, DynamoDB, S3, EventBridge.
 - Multi-tenant HMAC auth, idempotency, signed webhooks, audit, usage metering.
 - Customer-managed storage via AssumeRole to tenant S3.
